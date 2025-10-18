@@ -2,15 +2,57 @@
 
 A full-stack MERN application for managing projects and tasks.
 
-## Features
+## 🚀 Quick Start (Clone & Run)
 
-- User Authentication (Register/Login)
-- Project Management
-- Task Management within Projects
-- Real-time updates
-- Responsive UI
+### 1. Clone Repository
+```bash
+git clone https://github.com/Ankita-sharma1234/Task_Board.git
+cd Task_Board
+```
 
-## Tech Stack
+### 2. Backend Setup
+```bash
+cd Backend
+npm install
+```
+
+Create `.env` file in Backend directory:
+```env
+JWT_SECRET=your_strong_jwt_secret_key_here_make_it_strong_and_random
+MONGO_URI=mongodb+srv://ankitasharma162002_db_user:wBbkhtbeQMJrRtJm@cluster0.jbxrpqx.mongodb.net/Mern_task_DB?retryWrites=true&w=majority&appName=Cluster0
+PORT=5000
+```
+
+Start backend:
+```bash
+npm start
+# or
+npm run dev
+```
+
+### 3. Frontend Setup
+```bash
+cd Frontend
+npm install
+npm run dev
+```
+
+### 4. Access Application
+- **Frontend**: http://localhost:5173
+- **Backend API**: http://localhost:5000
+- **API Test**: http://localhost:5000/api/test
+
+## 📋 Features
+
+- ✅ User Authentication (Register/Login)
+- ✅ Project Management
+- ✅ Task Management within Projects
+- ✅ Real-time updates
+- ✅ Responsive UI
+- ✅ JWT Authentication
+- ✅ MongoDB Integration
+
+## 🛠️ Tech Stack
 
 ### Frontend
 - React 19
@@ -26,9 +68,10 @@ A full-stack MERN application for managing projects and tasks.
 - JWT Authentication
 - Bcrypt for password hashing
 
-## Project Structure
+## 📁 Project Structure
 
 ```
+Task_Board/
 ├── Frontend/          # React frontend
 │   ├── src/
 │   │   ├── components/
@@ -45,25 +88,26 @@ A full-stack MERN application for managing projects and tasks.
 └── README.md
 ```
 
-## Setup Instructions
+## 🔧 Development Commands
 
-### Backend Setup
-1. Navigate to Backend directory
-2. Install dependencies: `npm install`
-3. Create `.env` file with:
-   ```
-   JWT_SECRET=your_jwt_secret_key
-   MONGO_URI=your_mongodb_connection_string
-   PORT=5000
-   ```
-4. Start server: `npm start` or `npm run dev`
+### Backend
+```bash
+cd Backend
+npm install          # Install dependencies
+npm start           # Start production server
+npm run dev         # Start development server (nodemon)
+```
 
-### Frontend Setup
-1. Navigate to Frontend directory
-2. Install dependencies: `npm install`
-3. Start development server: `npm run dev`
+### Frontend
+```bash
+cd Frontend
+npm install          # Install dependencies
+npm run dev         # Start development server
+npm run build       # Build for production
+npm run preview     # Preview production build
+```
 
-## API Endpoints
+## 🌐 API Endpoints
 
 ### Authentication
 - `POST /api/auth/register` - User registration
@@ -81,24 +125,49 @@ A full-stack MERN application for managing projects and tasks.
 - `PUT /api/projects/:projectId/tasks/:taskId` - Update task
 - `DELETE /api/projects/:projectId/tasks/:taskId` - Delete task
 
-## Environment Variables
+## 🔐 Environment Variables
 
 Create a `.env` file in the Backend directory:
 
-```
-JWT_SECRET=your_strong_jwt_secret_key
-MONGO_URI=your_mongodb_connection_string
+```env
+JWT_SECRET=your_strong_jwt_secret_key_here_make_it_strong_and_random
+MONGO_URI=mongodb+srv://ankitasharma162002_db_user:wBbkhtbeQMJrRtJm@cluster0.jbxrpqx.mongodb.net/Mern_task_DB?retryWrites=true&w=majority&appName=Cluster0
 PORT=5000
 ```
 
-## Deployment
+## 🚀 Deployment Options
 
-This project can be deployed on platforms like:
-- Vercel (Frontend)
-- Railway/Heroku (Backend)
-- MongoDB Atlas (Database)
+### Frontend Deployment
+- **Vercel**: Connect GitHub repo, select Frontend folder
+- **Netlify**: Connect GitHub repo, build command: `npm run build`
 
-## Contributing
+### Backend Deployment
+- **Railway**: Connect GitHub repo, select Backend folder
+- **Render**: Connect GitHub repo, select Backend folder
+- **Heroku**: Connect GitHub repo, select Backend folder
+
+## 🐛 Troubleshooting
+
+### Common Issues:
+1. **Port already in use**: Change PORT in .env file
+2. **MongoDB connection failed**: Check MONGO_URI in .env
+3. **CORS errors**: Check frontend URL in server.js
+4. **Build errors**: Run `npm install` in both directories
+
+### Test API:
+```bash
+curl http://localhost:5000/api/test
+```
+
+## 📞 Support
+
+For issues or questions:
+1. Check the troubleshooting section
+2. Verify environment variables
+3. Ensure all dependencies are installed
+4. Check console for error messages
+
+## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
